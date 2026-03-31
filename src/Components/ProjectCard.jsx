@@ -17,9 +17,9 @@ const ProjectCard = ({ number, title, description, image, link }) => {
       </div>
       
       <div className="flex-1 flex flex-col">
-        <div className="text-5xl font-extrabold mb-8 text-white">{number}</div>
-        <h3 className="text-4xl font-bold mb-8 leading-tight">{title}</h3>
-        <p className="text-lg text-[#a0a0a0] mb-10 leading-relaxed">{description}</p>
+        <div className="text-4xl md:text-5xl font-extrabold mb-4 md:mb-8 text-white">{number}</div>
+        <h3 className="text-3xl md:text-4xl font-bold mb-4 md:mb-8 leading-tight">{title}</h3>
+        <p className="text-base md:text-lg text-[#a0a0a0] mb-8 md:mb-10 leading-relaxed">{description}</p>
         
         <a href={link} target="_blank" rel="noreferrer" className="text-white inline-flex transition-colors duration-300 hover:text-[#888] hoverable">
           <ExternalLink size={24} />

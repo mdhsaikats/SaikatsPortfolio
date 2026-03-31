@@ -87,9 +87,9 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 min-h-screen pt-[150px] px-[5%] md:px-[10%] pb-20 md:pb-[140px]"
+      className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 min-h-[100dvh] pt-[120px] lg:pt-[150px] px-[5%] md:px-[10%] pb-20 md:pb-[140px]"
     >
-      <div className="flex-1">
+      <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
         <h1 className="text-5xl md:text-6xl xl:text-[5rem] font-normal leading-tight tracking-tight mb-8">
           <span className="block text-3xl mb-2">
             Hello I'am{" "}
@@ -100,7 +100,7 @@ const Hero = () => {
           <br />
           Based In <strong className="font-extrabold">Bangladesh.</strong>
         </h1>
-        <p className="text-lg text-gray-600 max-w-[500px] leading-relaxed mb-10">
+        <p className="text-base sm:text-lg text-gray-600 max-w-[500px] leading-relaxed mb-10">
           I’m a passionate software developer focused on building scalable
           backend systems and modern web applications. With hands-on experience
           in Go, Java (Spring Boot), and React, I enjoy turning ideas into
@@ -110,7 +110,7 @@ const Hero = () => {
           building intelligent systems and AI-driven applications.
         </p>
 
-        <div className="flex gap-6">
+        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
           <a
             href="https://github.com/mdhsaikats"
             className="flex items-center justify-center w-12 h-12 border-2 border-black rounded-md text-black transition-all duration-300 hover:bg-black hover:text-white hover:-translate-y-1 hoverable"
@@ -150,7 +150,7 @@ const Hero = () => {
         <img
           src="/images/hero.png"
           alt="Developer Illustration"
-          className="max-w-full h-auto border-b-4 border-black"
+          className="w-full max-w-[400px] lg:max-w-full h-auto border-b-4 border-black"
         />
       </div>
     </section>

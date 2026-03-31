@@ -19,7 +19,7 @@ const projectsData = [
       <iframe
         src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7428078083699613696?collapsed=1"
         height="542"
-        width="504"
+        width="100%"
         frameborder="0"
         allowfullscreen=""
         title="Embedded post"
@@ -36,7 +36,7 @@ const projectsData = [
       <iframe
         src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7404963513057804288?collapsed=1"
         height="508"
-        width="504"
+        width="100%"
         frameborder="0"
         allowfullscreen=""
         title="Embedded post"
@@ -53,7 +53,7 @@ const projectsData = [
       <iframe
         src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7422690855855136769?collapsed=1"
         height="542"
-        width="504"
+        width="100%"
         frameborder="0"
         allowfullscreen=""
         title="Embedded post"
@@ -70,7 +70,7 @@ const projectsData = [
       <iframe
         src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7404969293693583361?collapsed=1"
         height="542"
-        width="504"
+        width="100%"
         frameborder="0"
         allowfullscreen=""
         title="Embedded post"

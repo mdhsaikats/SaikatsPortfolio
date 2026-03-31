@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { Menu, X } from 'lucide-react';
 import Button from './Button';
 import resumePdf from '../assets/resume.pdf';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +20,7 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (id) => {
+    setIsMobileMenuOpen(false); // Close mobile menu when navigating
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
@@ -40,9 +43,35 @@ const Navbar = () => {
           <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('contact')}>Contact Me</li>
         </ul>
 
-        <div>
-          <Button icon="download" href={resumePdf} download="resume.pdf">Resume</Button>
+        <div className="flex items-center gap-4">
+          <div className="hidden sm:block">
+            <Button icon="download" href={resumePdf} download="resume.pdf">Resume</Button>
+          </div>
+          <button 
+            className="md:hidden p-2 text-black cursor-none hoverable"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <div 
+        className={`md:hidden fixed inset-0 top-[72px] bg-white/90 backdrop-blur-lg z-[999] transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'
+        }`}
+      >
+        <ul className="flex flex-col items-center pt-20 h-full gap-8 text-2xl font-semibold">
+          <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('about')}>About Me</li>
+          <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('skills')}>Skills</li>
+          <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('projects')}>Project</li>
+          <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('experience')}>Experience</li>
+          <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('contact')}>Contact Me</li>
+          <li className="sm:hidden mt-4">
+             <Button icon="download" href={resumePdf} download="resume.pdf">Resume</Button>
+          </li>
+        </ul>
       </div>
     </nav>
   );
