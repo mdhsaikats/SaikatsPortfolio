@@ -6,7 +6,11 @@ const ExperienceCard = ({ logo, title, type, date, description }) => {
       <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
         <div className="flex items-center gap-6">
           <div className="text-3xl flex items-center justify-center">
-            {logo}
+            {typeof logo === 'string' && (logo.startsWith('http') || logo.startsWith('/')) ? (
+              <img src={logo} alt={`${title} logo`} className="w-8 h-8 object-contain" />
+            ) : (
+              logo
+            )}
           </div>
           <h3 className="text-xl font-semibold leading-relaxed">
             {title} {type && <span className="font-normal text-[#a0a0a0]">at {type}</span>}

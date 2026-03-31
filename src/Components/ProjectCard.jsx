@@ -5,11 +5,15 @@ const ProjectCard = ({ number, title, description, image, link }) => {
   return (
     <div className="flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-20 mb-24 cursor-none group hoverable lg:even:flex-row-reverse">
       <div className="flex-[1.2] rounded-xl overflow-hidden">
-        <img 
-          src={image} 
-          alt={title} 
-          className="w-full h-auto object-cover transition-transform duration-600 ease-[cubic-bezier(0.25,1,0.5,1)] rounded-xl group-hover:scale-105" 
-        />
+        {typeof image === 'string' ? (
+          <img 
+            src={image} 
+            alt={title} 
+            className="w-full h-auto object-cover transition-transform duration-600 ease-[cubic-bezier(0.25,1,0.5,1)] rounded-xl group-hover:scale-105" 
+          />
+        ) : (
+          image
+        )}
       </div>
       
       <div className="flex-1 flex flex-col">

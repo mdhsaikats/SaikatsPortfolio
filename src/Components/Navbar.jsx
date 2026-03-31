@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Button from './Button';
+import resumePdf from '../assets/resume.pdf';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -35,11 +36,12 @@ const Navbar = () => {
           <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('about')}>About Me</li>
           <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('skills')}>Skills</li>
           <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('projects')}>Project</li>
-          <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('experience')}>Contact Me</li>
+          <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('experience')}>Experience</li>
+          <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('contact')}>Contact Me</li>
         </ul>
 
         <div>
-          <Button icon="download">Resume</Button>
+          <Button icon="download" href={resumePdf} download="resume.pdf">Resume</Button>
         </div>
       </div>
     </nav>

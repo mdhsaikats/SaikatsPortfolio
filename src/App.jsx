@@ -13,6 +13,7 @@ import Skills from './Section/Skills';
 import Experience from './Section/Experience';
 import About from './Section/About';
 import Projects from './Section/Projects';
+import Contact from './Section/Contact';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,6 +77,7 @@ function App() {
         <Experience />
         <About />
         <Projects />
+        <Contact />
       </main>
       <CustomCursor />
     </div>

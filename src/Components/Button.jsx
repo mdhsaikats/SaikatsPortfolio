@@ -1,7 +1,7 @@
 import React from 'react';
 import { Download, ArrowRight, ExternalLink } from 'lucide-react';
 
-const Button = ({ children, variant = 'primary', icon = null, onClick, className = '' }) => {
+const Button = ({ children, variant = 'primary', icon = null, onClick, className = '', href, download }) => {
   const getIcon = () => {
     switch (icon) {
       case 'download': return <Download size={18} />;
@@ -18,6 +18,15 @@ const Button = ({ children, variant = 'primary', icon = null, onClick, className
     outline: "bg-transparent text-black border-2 border-black hover:bg-black hover:text-white",
     'light-outline': "bg-transparent text-white border-2 border-white hover:bg-white hover:text-black"
   };
+
+  if (href) {
+    return (
+      <a href={href} download={download} className={`${baseStyles} ${variants[variant]} ${className}`} onClick={onClick}>
+        {children}
+        {icon && <span className="flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">{getIcon()}</span>}
+      </a>
+    );
+  }
 
   return (
     <button className={`${baseStyles} ${variants[variant]} ${className}`} onClick={onClick}>
