@@ -68,7 +68,7 @@ function App() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen font-sans bg-background text-text">
+    <div className="flex flex-col min-h-screen font-sans bg-white text-black">
       <Navbar />
       <main>
         <Hero />
