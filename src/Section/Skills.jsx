@@ -8,20 +8,29 @@ const skillsData = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg",
   },
   {
-    name: "Java",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-plain.svg",
+    name: "Python",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-plain.svg",
+  },
+  {
+    name: "NodeJS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
+  },
+  {
+    name: "ExpressJS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg"
   },
   {
     name: "JavaScript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
   },
+
   {
     name: "C",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
   },
   {
-    name: "Python",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-plain.svg",
+    name: "Java",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-plain.svg",
   },
 
   // 🌐 Frontend
@@ -70,6 +79,10 @@ const skillsData = [
   {
     name: "Postman",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-plain.svg",
+  },
+  {
+    name: "Nginx",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg",
   },
 
   // 🔌 Hardware / Other
