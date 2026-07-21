@@ -23,7 +23,11 @@ const Navbar = () => {
     setIsMobileMenuOpen(false); // Close mobile menu when navigating
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+      if (window.lenis) {
+        window.lenis.scrollTo(el);
+      } else {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -32,13 +36,14 @@ const Navbar = () => {
       <div className="flex justify-between items-center max-w-[1400px] mx-auto">
         <div className="flex items-center gap-2 font-bold text-xl cursor-none hoverable" onClick={() => scrollToSection('hero')}>
           <div className="w-[14px] h-[24px] bg-black rounded-tr-[10px] rounded-br-[0px] rounded-tl-[4px] rounded-bl-[4px]"></div>
-          <span>Personal</span>
+          <span>portfolio</span>
         </div>
-        
+
         <ul className="hidden md:flex gap-8 font-semibold text-base">
           <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('about')}>About Me</li>
           <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('skills')}>Skills</li>
           <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('projects')}>Project</li>
+          <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('opensource')}>Packages</li>
           <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('experience')}>Experience</li>
           <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('contact')}>Contact Me</li>
         </ul>
@@ -47,7 +52,7 @@ const Navbar = () => {
           <div className="hidden sm:block">
             <Button icon="download" href={resumePdf} download="resume.pdf">Resume</Button>
           </div>
-          <button 
+          <button
             className="md:hidden p-2 text-black cursor-none hoverable"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -57,19 +62,19 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div 
-        className={`md:hidden fixed inset-0 top-[72px] bg-white/90 backdrop-blur-lg z-[999] transition-all duration-300 ease-in-out ${
-          isMobileMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'
-        }`}
+      <div
+        className={`md:hidden fixed inset-0 top-[72px] bg-white/90 backdrop-blur-lg z-[999] transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'
+          }`}
       >
         <ul className="flex flex-col items-center pt-20 h-full gap-8 text-2xl font-semibold">
           <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('about')}>About Me</li>
           <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('skills')}>Skills</li>
           <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('projects')}>Project</li>
+          <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('opensource')}>Packages</li>
           <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('experience')}>Experience</li>
           <li className="cursor-none transition-colors duration-300 hover:text-gray-600 hoverable" onClick={() => scrollToSection('contact')}>Contact Me</li>
           <li className="sm:hidden mt-4">
-             <Button icon="download" href={resumePdf} download="resume.pdf">Resume</Button>
+            <Button icon="download" href={resumePdf} download="resume.pdf">Resume</Button>
           </li>
         </ul>
       </div>

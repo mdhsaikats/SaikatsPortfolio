@@ -13,6 +13,7 @@ import Skills from './Section/Skills';
 import Experience from './Section/Experience';
 import About from './Section/About';
 import Projects from './Section/Projects';
+import OpenSource from './Section/OpenSource';
 import Contact from './Section/Contact';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -31,6 +32,8 @@ function App() {
       touchMultiplier: 2,
       infinite: false,
     });
+
+    window.lenis = lenis;
 
     lenis.on('scroll', ScrollTrigger.update);
 
@@ -65,6 +68,7 @@ function App() {
 
     return () => {
       lenis.destroy();
+      window.lenis = null;
     };
   }, []);
 
@@ -77,6 +81,7 @@ function App() {
         <Experience />
         <About />
         <Projects />
+        <OpenSource />
         <Contact />
       </main>
       <CustomCursor />
