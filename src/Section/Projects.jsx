@@ -4,6 +4,14 @@ import ProjectCard from "../Components/ProjectCard";
 const projectsData = [
   {
     number: "01",
+    title: "TaskMinder",
+    description:
+      "A modern task and project management productivity platform featuring Notion-like rich note-taking documents, interactive whiteboard with real-time live collaboration, team project invitations, and task assignment workflows. Built with a React frontend, Go (Golang) backend, and PostgreSQL database.",
+    image: "/images/taskminder.png",
+    link: "https://taskminder.lazystudio.co/",
+  },
+  {
+    number: "02",
     title: "BrewMe",
     description:
       "A creator-support platform similar to Buy Me a Coffee. Features interactive creator profiles, real-time search, and category filtering for creator discovery, a donation widget with custom messaging/multipliers, and secure data handling. Built with a React frontend, Go (Golang) backend, and PostgreSQL database.",
@@ -11,7 +19,7 @@ const projectsData = [
     link: "https://brewme-seven.vercel.app/",
   },
   {
-    number: "02",
+    number: "03",
     title: "Gachpala Marketplace",
     description:
       "A sophisticated cryptocurrency dashboard built with React and dynamic charting libraries. Provides real-time data flow, sleek dark-mode UI, and advanced portfolio tracking.",
@@ -19,7 +27,7 @@ const projectsData = [
     link: "https://gachpala.com",
   },
   {
-    number: "03",
+    number: "04",
     title: "Essense.",
     description:
       "A minimalistic perfume shop website template with a focus on typography and smooth animations.",
@@ -36,7 +44,7 @@ const projectsData = [
     link: "https://github.com/mdhsaikats/Essense-WebPage",
   },
   {
-    number: "04",
+    number: "05",
     title: "Stick Up",
     description:
       "Its a ecommerce for sticker and poster full stack website with backend in GoLang , HTML5, TailwindCSS , JS",
@@ -53,7 +61,7 @@ const projectsData = [
     link: "https://github.com/mdhsaikats/stick-up-web-app",
   },
   {
-    number: "05",
+    number: "06",
     title: "RESTful CRUD API ",
     description:
       "Built a lightweight RESTful CRUD API in Go (net/http + MySQL) — JSON endpoints, CORS support, and ready for env-based config. ",
@@ -70,7 +78,7 @@ const projectsData = [
     link: "https://github.com/mdhsaikats/CRUD",
   },
   {
-    number: "06",
+    number: "07",
     title: "Laundry Management System ",
     description:
       "Proud to present my Laundry Management System, built with Go! This project features secure JWT authentication, user and admin roles, order tracking, real-time status updates, and a robust RESTful API. Designed for scalability and reliability, it streamlines laundry operations for both customers and administrators. Technologies used: Go, MySQL, Chi router, JWT, bcrypt, and more. Excited to connect with fellow developers and industry professionals for feedback and collaboration!",
