@@ -28,14 +28,30 @@ const projectsData = [
   },
   {
     number: "04",
-    title: "Gachpala Marketplace",
+    title: "Gachpala",
     description:
-      "A sophisticated cryptocurrency dashboard built with React and dynamic charting libraries. Provides real-time data flow, sleek dark-mode UI, and advanced portfolio tracking.",
+      "A curated e-commerce platform for indoor and outdoor plants, gardening essentials, and greenery decor. Features product discovery, category filtering, cart management, and a clean, natural UI for plant enthusiasts.",
     image: "/images/gachpala.png",
-    link: "https://gachpala.com",
+    link: "https://gachpala.com/",
   },
   {
     number: "05",
+    title: "Gachpala Seller",
+    description:
+      "A comprehensive merchant dashboard and seller center for GachPala nurseries and vendors. Features real-time inventory management, order fulfillment, sales analytics, discount controls, payouts, and buyer review monitoring.",
+    image: "/images/gachpala-seller.png",
+    link: "https://seller.gachpala.com/",
+  },
+  {
+    number: "06",
+    title: "Gachpala Admin",
+    description:
+      "A centralized super-admin control panel for the GachPala ecosystem. Enables comprehensive platform oversight with real-time revenue and sales trends, seller onboarding & moderation, product catalog approval, order status tracking, and financial analytics.",
+    image: "/images/gachpala-admin.png",
+    link: "https://admin.gachpala.com/",
+  },
+  {
+    number: "07",
     title: "Essense.",
     description:
       "A minimalistic perfume shop website template with a focus on typography and smooth animations.",
@@ -52,7 +68,7 @@ const projectsData = [
     link: "https://github.com/mdhsaikats/Essense-WebPage",
   },
   {
-    number: "06",
+    number: "08",
     title: "Stick Up",
     description:
       "Its a ecommerce for sticker and poster full stack website with backend in GoLang , HTML5, TailwindCSS , JS",
@@ -69,7 +85,7 @@ const projectsData = [
     link: "https://github.com/mdhsaikats/stick-up-web-app",
   },
   {
-    number: "07",
+    number: "09",
     title: "RESTful CRUD API ",
     description:
       "Built a lightweight RESTful CRUD API in Go (net/http + MySQL) — JSON endpoints, CORS support, and ready for env-based config. ",
@@ -86,7 +102,7 @@ const projectsData = [
     link: "https://github.com/mdhsaikats/CRUD",
   },
   {
-    number: "08",
+    number: "10",
     title: "Laundry Management System ",
     description:
       "Proud to present my Laundry Management System, built with Go! This project features secure JWT authentication, user and admin roles, order tracking, real-time status updates, and a robust RESTful API. Designed for scalability and reliability, it streamlines laundry operations for both customers and administrators. Technologies used: Go, MySQL, Chi router, JWT, bcrypt, and more. Excited to connect with fellow developers and industry professionals for feedback and collaboration!",
